@@ -1,9 +1,9 @@
 #!/bin/bash -e
 
 #SBATCH -J count-t
-#SBATCH -A DSMITH-BIOCLOUD
+#SBATCH -A DSMITH-SL3-CPU
 #SBATCH -o slurm-%A.out
-#SBATCH -p biocloud-normal
-#SBATCH --time=10:00:00
+#SBATCH -p skylake
+#SBATCH --time=00:05:00
 
 srun -n 1 sample-count.sh

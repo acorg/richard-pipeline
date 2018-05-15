@@ -1,9 +1,9 @@
 #!/bin/bash -e
 
 #SBATCH -J diamond
-#SBATCH -A DSMITH-BIOCLOUD
+#SBATCH -A DSMITH-SL3-CPU
 #SBATCH -o slurm-%A.out
-#SBATCH -p biocloud-normal
+#SBATCH -p skylake
 #SBATCH --time=05:00:00
 
 task=$1

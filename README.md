@@ -17,6 +17,7 @@ capture data.
 * `05-sample-count`: Count the number of reads per sample (summing the
   sequencing read counts from `01-stats`).
 * `06-stop`: Logging. Create `slurm-pipeline.done` in top-level dir.
+* `07-error`: Run if an error occurs in earlier steps. Does some cleaning up.
 
 ## Output
 

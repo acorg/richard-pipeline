@@ -25,7 +25,7 @@ html:
             > virus.html
 
 tar:
-	tar cfvj results.tar.bz2 */04-panel/out virus.*
+	tar cfvj results.tar.bz2 */04-panel/out virus.* {samples,pathogens}.index
 
 clean:
-	rm -f */04-panel/out/pathogen-*.fast* virus.{html,png}
+	rm -f */04-panel/out/pathogen-*.fast* virus.{html,png} {samples,pathogens}.index

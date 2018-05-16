@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-#SBATCH -J count-t
+#SBATCH -J count
 #SBATCH -A DSMITH-SL3-CPU
 #SBATCH -o slurm-%A.out
 #SBATCH -p skylake

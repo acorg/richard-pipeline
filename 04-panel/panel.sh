@@ -73,14 +73,14 @@ function panel()
       --json $allJSON \
       --fastq $allFASTQ \
       --matcher diamond \
-      --outputDir out \
+      --outputDir $outputDir \
       --withScoreBetterThan 60 \
       --maxTitles 100 \
       --minMatchingReads 10 \
       --scoreCutoff 50 \
       --minCoverage 0.1 \
       --negativeTitleRegex phage \
-      --diamondDatabaseFastaFilename $dbFastaFile > summary-proteins
+      --databaseFastaFilename $dbFastaFile > summary-proteins
     echo "  noninteractive-alignment-panel.py stopped at $(date)" >> $log
 
     echo "  proteins-to-pathogens.py started at $(date)" >> $log

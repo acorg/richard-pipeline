@@ -2,8 +2,8 @@
 
 This repo contains a
 [slurm-pipeline](https://github.com/acorg/slurm-pipeline) specification
-file (`specification.json`) and associated scripts for processing Lasse's
-capture data.
+file (`specification.json`) and associated scripts for processing Turi's
+Richard sequencing data.
 
 ## Pipeline steps
 

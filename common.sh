@@ -51,11 +51,12 @@ function tasksForSample()
 
     # Emit a task for all sequencing files that correspond to this sample.
     # The task names are the FASTQ file names for this sample, minus the
-    # .trim.fastq.gz suffix. The sequencing to sample file has lines that
+    # .fastq suffix. The sequencing to sample file has lines that
     # contain the FASTQ file location followed by a space and then the
     # sample name (which is why we have a .* at the end of the sed - to
     # also remove the sample name).
-    tasks=$(egrep " $sample\$" $sequencingToSample | sed -e 's/\.trim\.fastq\.gz.*//')
+    # before: tasks=$(egrep " $sample\$" $sequencingToSample | sed -e 's/\.trim\.fastq\.gz.*//')
+    tasks=$(cut -f1 -d ' '< $sequencingToSample | sed -e 's/\.fastq$//')
 
     if [ -z "$tasks" ]
     then

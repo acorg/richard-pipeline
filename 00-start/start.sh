@@ -40,7 +40,7 @@ tasks=$(tasksForSample)
 
 for task in $tasks
 do
-    fastq=$dataDir/$task.trim.fastq.gz
+    fastq=$dataDir/$task.fastq
     checkFastq $fastq $log
     echo "  task $task, FASTQ $fastq" >> $log
 done

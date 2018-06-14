@@ -4,7 +4,7 @@
 
 task=$1
 log=$logDir/$task.log
-fastq=$dataDir/$task.trim.fastq.gz
+fastq=$dataDir/$task.fastq
 countOut=$task.count
 MD5Out=$task.md5
 
@@ -19,7 +19,7 @@ function stats()
     rm -f $countOut $MD5Out
 
     # Count reads.
-    echo "$fastq $(zcat $fastq | egrep '^\+$' | wc -l | awk '{print $1}')" > $countOut
+    echo "$fastq $(cat $fastq | egrep '^\+$' | wc -l | awk '{print $1}')" > $countOut
 
     md5sum $fastq > $MD5Out
 }

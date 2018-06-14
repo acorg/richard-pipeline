@@ -5,7 +5,7 @@
 task=$1
 log=$logDir/$task.log
 bwadb=$root/share/bwa-indices/homo-sapiens
-fastq=$dataDir/$task.trim.fastq.gz
+fastq=$dataDir/$task.fastq
 out=$task-unmapped.fastq.gz
 
 logStepStart $log

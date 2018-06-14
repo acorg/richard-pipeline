@@ -22,7 +22,7 @@ function panel()
 {
     echo "  noninteractive-alignment-panel.py started at $(date)" >> $log
 
-    dbFastaFile=$root/share/ncbi/viral-refseq/viral-protein-20161124/viral.protein.fasta
+    dbFastaFile=$root/share/rvdb/U-RVDBv12.2-prot.fasta
 
     if [ ! -f $dbFastaFile ]
     then
@@ -79,8 +79,7 @@ function panel()
       --minMatchingReads 10 \
       --scoreCutoff 50 \
       --minCoverage 0.1 \
-      --negativeTitleRegex phage \
-      --databaseFastaFilename $dbFastaFile > summary-proteins
+      --negativeTitleRegex phage > summary-proteins
     echo "  noninteractive-alignment-panel.py stopped at $(date)" >> $log
 
     echo "  proteins-to-pathogens.py started at $(date)" >> $log

@@ -1,4 +1,4 @@
-# Lasse requencing initial pipeline spec
+# Richard sequencing data pipeline spec
 
 This repo contains a
 [slurm-pipeline](https://github.com/acorg/slurm-pipeline) specification
@@ -12,7 +12,7 @@ Richard sequencing data.
 * `01-stats`: Collect statistics on the original (trimmed) FASTQ files.
 * `02-map`: Map reads to the human genome using bwa. Find unmapped reads
   for the next stage of processing.
-* `03-diamond`: Map the non-human reads to a viral protein database.
+* `03-diamond`: Map the non-human reads to a viral protein database (rvdb).
 * `04-panel`: Make a [dark matter](https://github.com/acorg/dark-matter/) panel of blue plots.
 * `05-sample-count`: Count the number of reads per sample (summing the
   sequencing read counts from `01-stats`).

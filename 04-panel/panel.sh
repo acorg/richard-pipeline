@@ -74,10 +74,10 @@ function panel()
       --fastq $allFASTQ \
       --matcher diamond \
       --outputDir $outputDir \
-      --withScoreBetterThan 60 \
+      --withScoreBetterThan 50 \
       --maxTitles 100 \
-      --minMatchingReads 10 \
-      --scoreCutoff 50 \
+      --minMatchingReads 5 \
+      --scoreCutoff 45 \
       --minCoverage 0.1 \
       --negativeTitleRegex phage > summary-proteins
     echo "  noninteractive-alignment-panel.py stopped at $(date)" >> $log

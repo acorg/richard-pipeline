@@ -1,6 +1,0 @@
-Task panel (SLURM job 2783492) started at Di 12. Jun 13:30:22 BST 2018
-Task log file is ../logs/sample.log
-Found 3 interesting titles.
-slurmstepd: error: Exceeded job memory limit at some point.
-srun: error: cpu-e-191: task 0: Out Of Memory
-slurmstepd: error: Exceeded job memory limit at some point.
